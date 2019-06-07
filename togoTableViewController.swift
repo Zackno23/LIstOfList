@@ -41,13 +41,9 @@ class togoTableViewController: UITableViewController {
             placeList.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath as IndexPath], with: UITableView.RowAnimation.automatic)
         }
-        
-        
-        
         UserDefaults.standard.set( placeList, forKey: "List" )
-        
-        
     }
+    
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
