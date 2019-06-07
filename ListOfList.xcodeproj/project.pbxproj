@@ -15,6 +15,7 @@
 		C747F55022AA11BB00752F6B /* ToDoListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C747F54F22AA11BB00752F6B /* ToDoListController.swift */; };
 		C747F55222AA1CAD00752F6B /* addButtonControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C747F55122AA1CAD00752F6B /* addButtonControllerViewController.swift */; };
 		C760CBEE22AA459A0027E5FE /* togoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C760CBED22AA459A0027E5FE /* togoTableViewController.swift */; };
+		C760CBF022AA57290027E5FE /* toEatTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C760CBEF22AA57290027E5FE /* toEatTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		C747F54F22AA11BB00752F6B /* ToDoListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListController.swift; sourceTree = "<group>"; };
 		C747F55122AA1CAD00752F6B /* addButtonControllerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addButtonControllerViewController.swift; sourceTree = "<group>"; };
 		C760CBED22AA459A0027E5FE /* togoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = togoTableViewController.swift; sourceTree = "<group>"; };
+		C760CBEF22AA57290027E5FE /* toEatTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = toEatTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +46,7 @@
 		C747F53122AA0E6F00752F6B = {
 			isa = PBXGroup;
 			children = (
+				C760CBEF22AA57290027E5FE /* toEatTableViewController.swift */,
 				C760CBED22AA459A0027E5FE /* togoTableViewController.swift */,
 				C747F55122AA1CAD00752F6B /* addButtonControllerViewController.swift */,
 				C747F54F22AA11BB00752F6B /* ToDoListController.swift */,
@@ -149,6 +152,7 @@
 				C747F55222AA1CAD00752F6B /* addButtonControllerViewController.swift in Sources */,
 				C747F53E22AA0E7000752F6B /* AppDelegate.swift in Sources */,
 				C760CBEE22AA459A0027E5FE /* togoTableViewController.swift in Sources */,
+				C760CBF022AA57290027E5FE /* toEatTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
