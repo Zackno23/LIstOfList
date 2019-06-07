@@ -18,11 +18,12 @@ class addButtonControllerViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    
-    
     @IBOutlet weak var addWord: UITextField!
     @IBAction func addButton(_ sender: UIButton) {
-        addList.append(addWord.text!)
+        if addWord.text! != "" && addWord.text != nil{
+            addList.append(addWord.text!)
+        }
+        
     }
     
     /*
