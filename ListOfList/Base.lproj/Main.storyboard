@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -86,9 +87,9 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fS1-Vu-OU1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-916" y="20"/>
+            <point key="canvasLocation" x="-912" y="-194"/>
         </scene>
-        <!--To Do List Controller-->
+        <!--Title-->
         <scene sceneID="D7M-dz-PRU">
             <objects>
                 <tableViewController id="6MZ-nr-Jsh" customClass="ToDoListController" customModule="ListOfList" customModuleProvider="target" sceneMemberID="viewController">
@@ -120,10 +121,53 @@
                             <outlet property="delegate" destination="6MZ-nr-Jsh" id="FjN-4B-VKv"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Title" id="IT6-Cz-FYI">
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="bPe-Yy-LiQ">
+                            <connections>
+                                <segue destination="2hl-3C-WsK" kind="show" id="NYr-Vx-4tg"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WFz-Jv-Gf8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-133" y="19"/>
+            <point key="canvasLocation" x="-61" y="-194"/>
+        </scene>
+        <!--Add Button Controller View Controller-->
+        <scene sceneID="p5f-nv-LxZ">
+            <objects>
+                <viewController id="2hl-3C-WsK" customClass="addButtonControllerViewController" customModule="ListOfList" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zS8-eH-Nbd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JhB-sR-O9n">
+                                <rect key="frame" x="116" y="222" width="151" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="addButton:" destination="2hl-3C-WsK" eventType="touchUpInside" id="xMd-em-oXt"/>
+                                    <segue destination="6MZ-nr-Jsh" kind="show" id="07T-ZG-wdx"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4qd-I6-9fV">
+                                <rect key="frame" x="81" y="145" width="159" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="No6-ss-DFY"/>
+                    </view>
+                    <connections>
+                        <outlet property="addWord" destination="4qd-I6-9fV" id="Z7q-Mu-NtW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4yN-RU-XlX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="695.6521739130435" y="-194.19642857142856"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="M5v-EJ-5yp">
@@ -139,7 +183,10 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QV0-dA-E0Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1836" y="20"/>
+            <point key="canvasLocation" x="-1829" y="-194"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="07T-ZG-wdx"/>
+    </inferredMetricsTieBreakers>
 </document>

@@ -9,7 +9,7 @@
 import UIKit
 
 class ToDoListController: UITableViewController {
-    let names = ["吉田", "力"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -29,7 +29,7 @@ class ToDoListController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return names.count
+        return addList.count
     }
 
     
@@ -37,7 +37,7 @@ class ToDoListController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "todo", for: indexPath)
 
         // Configure the cell...
-        cell.textLabel?.text = names[indexPath.row]
+        cell.textLabel?.text = addList[indexPath.row]
         return cell
     }
     
