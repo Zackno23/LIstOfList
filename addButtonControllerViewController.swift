@@ -8,6 +8,9 @@
 
 import UIKit
 var addList: Array <String> = []
+var placeList: Array <String> = []
+var foodList: Array <String> = []
+
 
 
 class addButtonControllerViewController: UIViewController {
@@ -21,8 +24,19 @@ class addButtonControllerViewController: UIViewController {
     @IBOutlet weak var addWord: UITextField!
     @IBAction func addButton(_ sender: UIButton) {
         if addWord.text! != "" && addWord.text != nil{
-            addList.append(addWord.text!)
+            switch section{
+            case 0 :
+                addList.append(addWord.text!)
+                loadView()
+            case 1 :
+                placeList.append(addWord.text!)
+            default:
+                foodList.append(addWord.text!)
+            }
+            
         }
+        
+        
         
     }
     

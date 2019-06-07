@@ -57,6 +57,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="Rmw-GG-zaA" kind="show" id="x0x-WQ-f2d"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="t0V-6b-7hX" style="IBUITableViewCellStyleDefault" id="sdE-P2-HT8">
                                         <rect key="frame" x="0.0" y="88" width="414" height="44"/>
@@ -133,6 +136,44 @@
             </objects>
             <point key="canvasLocation" x="-61" y="-194"/>
         </scene>
+        <!--Title-->
+        <scene sceneID="zJh-KZ-uQ2">
+            <objects>
+                <tableViewController id="Rmw-GG-zaA" customClass="togoTableViewController" customModule="ListOfList" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Y5b-cY-JUN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PlaceCell" id="XJe-cy-4S5">
+                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="XJe-cy-4S5" id="3a4-t3-oAq">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Rmw-GG-zaA" id="iv1-vF-eye"/>
+                            <outlet property="delegate" destination="Rmw-GG-zaA" id="vpJ-vp-h9m"/>
+                        </connections>
+                    </tableView>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Title" id="bRI-IX-9zR">
+                        <barButtonItem key="leftBarButtonItem" title="Item" id="ICv-5c-AwI">
+                            <connections>
+                                <segue destination="DB4-8t-mKj" kind="show" id="I3H-9f-RbS"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="JnZ-JW-dBs"/>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="akF-je-dKP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-62" y="536"/>
+        </scene>
         <!--Add Button Controller View Controller-->
         <scene sceneID="p5f-nv-LxZ">
             <objects>
@@ -187,6 +228,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="NYr-Vx-4tg"/>
         <segue reference="07T-ZG-wdx"/>
+        <segue reference="I3H-9f-RbS"/>
     </inferredMetricsTieBreakers>
 </document>

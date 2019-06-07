@@ -1,5 +1,5 @@
 //
-//  ToDoListController.swift
+//  togoTableViewController.swift
 //  ListOfList
 //
 //  Created by 吉田力 on 2019/06/07.
@@ -7,13 +7,13 @@
 //
 
 import UIKit
+var section = 1
 
-class ToDoListController: UITableViewController {
-    
+class togoTableViewController: UITableViewController {
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        section = 0
-        
+
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -25,42 +25,22 @@ class ToDoListController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 1
-    }
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool
-    {
-        return true
-    }
-    
-    //スワイプしたセルを削除
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == UITableViewCell.EditingStyle.delete {
-            addList.remove(at: indexPath.row)
-            tableView.deleteRows(at: [indexPath as IndexPath], with: UITableView.RowAnimation.automatic)
-        }
-        
-        
-
-        UserDefaults.standard.set( addList, forKey: "List" )
-        
-        
-    }
+        return 1    }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return addList.count
+        return placeList.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "todo", for: indexPath)
-
+        let cell = tableView.dequeueReusableCell(withIdentifier: "PlaceCell", for: indexPath)
+        cell.textLabel.text! = placeList[IndexPath.row]
         // Configure the cell...
-        cell.textLabel?.text = addList[indexPath.row]
+
         return cell
     }
     
-
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
