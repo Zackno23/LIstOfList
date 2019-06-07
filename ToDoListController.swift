@@ -26,6 +26,26 @@ class ToDoListController: UITableViewController {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
+    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool
+    {
+        return true
+    }
+    
+    //スワイプしたセルを削除
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == UITableViewCell.EditingStyle.delete {
+            addList.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath as IndexPath], with: UITableView.RowAnimation.automatic)
+        }
+        
+        
+        
+        //ListDataに保存してみるぞおおおおおお
+        //セルを削除したらすぐ保存ってこと
+        UserDefaults.standard.set( addList, forKey: "List" )
+        
+        
+    }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
