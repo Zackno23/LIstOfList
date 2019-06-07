@@ -166,7 +166,11 @@
                                 <segue destination="DB4-8t-mKj" kind="show" id="I3H-9f-RbS"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="JnZ-JW-dBs"/>
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="JnZ-JW-dBs">
+                            <connections>
+                                <segue destination="2hl-3C-WsK" kind="show" id="KuG-kv-Qb5"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
@@ -188,7 +192,6 @@
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="addButton:" destination="2hl-3C-WsK" eventType="touchUpInside" id="xMd-em-oXt"/>
-                                    <segue destination="6MZ-nr-Jsh" kind="show" id="07T-ZG-wdx"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4qd-I6-9fV">
@@ -228,8 +231,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="NYr-Vx-4tg"/>
-        <segue reference="07T-ZG-wdx"/>
+        <segue reference="KuG-kv-Qb5"/>
         <segue reference="I3H-9f-RbS"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -10,8 +10,13 @@ import UIKit
 var section = 1
 
 class togoTableViewController: UITableViewController {
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadData()
+    }
 
     override func viewDidLoad() {
+        section = 1
         super.viewDidLoad()
 
         // Uncomment the following line to preserve selection between presentations
@@ -31,11 +36,23 @@ class togoTableViewController: UITableViewController {
         // #warning Incomplete implementation, return the number of rows
         return placeList.count
     }
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == UITableViewCell.EditingStyle.delete {
+            placeList.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath as IndexPath], with: UITableView.RowAnimation.automatic)
+        }
+        
+        
+        
+        UserDefaults.standard.set( placeList, forKey: "List" )
+        
+        
+    }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PlaceCell", for: indexPath)
-        cell.textLabel.text! = placeList[IndexPath.row]
+        cell.textLabel?.text = placeList[indexPath.row]
         // Configure the cell...
 
         return cell

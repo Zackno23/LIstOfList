@@ -27,7 +27,7 @@ class addButtonControllerViewController: UIViewController {
             switch section{
             case 0 :
                 addList.append(addWord.text!)
-                loadView()
+                
             case 1 :
                 placeList.append(addWord.text!)
             default:
